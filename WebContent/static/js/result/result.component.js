@@ -1,15 +1,17 @@
 'use strict';
 
 App.component('result', {
-    templateUrl: '/templates/result.html',
+    templateUrl: 'static/templates/result.html',
     controller: ResultController,
     bindings: {
-      resultList: '='
+      resultList: '<'
     }
   });
 
 function ResultController(){
+	console.log("result component loaded.");
+	
   var vm = this;
   
-  
+  console.log(vm.resultList);
 };

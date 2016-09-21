@@ -1,13 +1,13 @@
 'use strict';
 
 App.component('main', {
-    templateUrl: '/templates/result.html',
-    controller: MainController
+    templateUrl: 'static/templates/main.html',
+    controller: ['RentingService', MainController],
   });
 
-function MainController(){
+function MainController(RentingService){
   var vm = this;
-  
-  vm.resultList = ["blabla", "ojfzpoef"];
+  console.log('main controller loaded.');
+  vm.resultList = RentingService.getAll();
   
 };
