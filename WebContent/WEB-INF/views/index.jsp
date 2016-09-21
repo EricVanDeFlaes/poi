@@ -104,7 +104,7 @@
 					</li>
 				</ul>
 			</div>
-			<nav aria-label="Page navigation text-center">
+			<nav aria-label="Page navigation">
 				<ul class="pagination">
 					<li><a href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
 					</a></li>
