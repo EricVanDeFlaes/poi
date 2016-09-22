@@ -2,18 +2,18 @@
 
 App.component('searchBar', {
     templateUrl: 'static/templates/searchBar.html',
-    controller: ['RentingService', searchBarController],
-    bindings: {
-      resultList: '='
-    }
+    controller: ['RentingService', searchBarController]
   });
 
 function searchBarController(RentingService){
   var vm = this;
-  console.log("searchbar loaded.");
+  vm.resultList = {};
   
   vm.updateList = function(){
+	  console.log("updating list");
 	  vm.resultList = RentingService.getAll();
+	  console.log("list updated:");
+	  console.log(vm.resultList);
   }
 }
 

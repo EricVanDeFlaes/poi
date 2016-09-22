@@ -8,6 +8,4 @@ App.component('main', {
 function MainController(RentingService){
   var vm = this;
   console.log('main controller loaded.');
-  vm.resultList = RentingService.getAll();
-  
 };

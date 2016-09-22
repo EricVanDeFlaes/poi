@@ -7,7 +7,8 @@
 <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
 </head>
 <body ng-app="myApp" class="ng-cloak">
-
+<main></main>
+<!--
 	<section class="container">
 		<nav class="navbar navbar-default">
 			<form class="navbar-form navbar-left">
@@ -28,12 +29,6 @@
 					<li><a data-toggle="tab" href="#mosaic"><span class="glyphicon glyphicon-th-large"></span></a></li>
 					<li><a data-toggle="tab" href="#detail"><span class="glyphicon glyphicon-file"></span></a></li>
 				</ul>
-				<!-- 				<div class="btn-group" role="group"> -->
-				<!-- 					<a href="#list" class="btn btn-default" data-toggle="tab" title="Affichage en liste"> <span class="glyphicon glyphicon-th-list"></span> -->
-				<!-- 					</a> <a href="#mosaic" class="btn btn-default" data-toggle="tab" title="Affichage en mosaique"> <span class="glyphicon glyphicon-th-large"></span> -->
-				<!-- 					</a> <a href="#detail" class="btn btn-default" data-toggle="tab" title="Affichage en page complète"> <span class="glyphicon glyphicon-file"></span> -->
-				<!-- 					</a> -->
-				<!-- 				</div> -->
 			</div>
 		</nav>
 	</section>
@@ -187,11 +182,7 @@
 
 		</div>
 	</section>
-
-
-
-
-
+ -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>
@@ -202,8 +193,8 @@
 	<script src="<c:url value='/static/js/app.js' />"></script>
 	<script src="<c:url value='/static/js/services/renting.service.js' />"></script>
 	<script src="<c:url value='/static/js/main/main.component.js' />"></script>
-	<script src="<c:url value='/static/js/result/result.component.js' />"></script>
 	<script src="<c:url value='/static/js/searchBar/searchBar.component.js' />"></script>
+	<script src="<c:url value='/static/js/result/result.component.js' />"></script>
 
 </body>
 </html>
