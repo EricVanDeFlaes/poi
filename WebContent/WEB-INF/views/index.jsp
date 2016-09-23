@@ -7,8 +7,7 @@
 <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
 </head>
 <body ng-app="myApp" class="ng-cloak">
-<main></main>
-<!--
+<viewer></viewer>
 	<section class="container">
 		<nav class="navbar navbar-default">
 			<form class="navbar-form navbar-left">
@@ -182,7 +181,7 @@
 
 		</div>
 	</section>
- -->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>
@@ -192,9 +191,9 @@
 
 	<script src="<c:url value='/static/js/app.js' />"></script>
 	<script src="<c:url value='/static/js/services/renting.service.js' />"></script>
-	<script src="<c:url value='/static/js/main/main.component.js' />"></script>
-	<script src="<c:url value='/static/js/searchBar/searchBar.component.js' />"></script>
-	<script src="<c:url value='/static/js/result/result.component.js' />"></script>
+	<script src="<c:url value='/static/js/components/viewer/searchBar.component.js' />"></script>
+	<script src="<c:url value='/static/js/components/viewer/list.component.js' />"></script>
+	<script src="<c:url value='/static/js/components/viewer/viewer.component.js' />"></script>
 
 </body>
 </html>
