@@ -1,6 +1,46 @@
-list
-<ul>
-	<li ng-repeat="r in $ctrl.viewerList">
-		{{r}}
-	</li>
-</ul>
+<section class="container tab-content" id="myTabContent">
+	<div class="tab-pane fade in active" id="list">
+		<div class="panel panel-default">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="l in $ctrl.viewerList">
+					<div class="media">
+						<div class="media-left">
+							<a href="#"> <img class="media-object" src="https://placehold.it/64x64">
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">{{l.Title}}</h4>
+							<p>{{l.Place.Address}}, B.P: {{l.Place.BP}}</p>
+							<p>{{l.Description}}</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="tab-pane fade" id="mosaic">
+		<div class="col-sm-6 col-md-4 col-xs-6" ng-repeat="m in $ctrl.viewerList">
+			<div class="thumbnail">
+				<img src="https://placehold.it/250x200">
+				<div class="caption">
+					<h3>{{m.Title}}</h3>
+					<p>{{m.Description}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="tab-pane fade" id="detail">
+		<nav aria-label="...">
+			<ul class="pager">
+				<li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+				<li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+			</ul>
+		</nav>
+		<div class="panel panel-primary">
+			<div class="panel-heading">Panel heading without title</div>
+			<div class="panel-body">Panel content</div>
+		</div>
+	</div>
+</section>
