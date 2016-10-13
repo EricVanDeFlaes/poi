@@ -1,14 +1,4 @@
 <section class="container">
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<viewer-search-bar/>
-		<div class="navbar-form navbar-right">
-			<ul class="nav nav-pills">
-				<li role="presentation" class="active"><a href="#list" aria-controls="list" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-th-list"></span></a></li>
-				<li role="presentation"><a href="#mosaic" aria-controls="mosaic" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-th-large"></span></a></li>
-				<li role="presentation"><a href="#detail" aria-controls="detail" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-file"></span></a></li>
-			</ul>
-		</div>
-	</nav>
+	<viewer-search-bar/>
 </section>
-<br/>
-<viewer-list viewer-list="$ctrl.filteredList"/>
+<viewer-list current="$ctrl.current" viewer-list="$ctrl.filteredList"/>

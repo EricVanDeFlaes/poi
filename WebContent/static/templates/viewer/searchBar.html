@@ -1,12 +1,73 @@
-<form class="navbar-form navbar-left">
-	<div class="form-group">
-		<label class="control-label" for="Place">Place</label> <input name="place" type="text" ng-model="$ctrl.place" class="form-control" placeholder="e.g.: City, country code ...">
+<nav class="navbar navbar-default navbar-fixed-top">
+	<form class="navbar-form navbar-left">
+		<div class="form-group">
+			<label class="control-label" for="Place">Place</label>
+			<input name="place" type="text" ng-model="$ctrl.place" class="form-control" placeholder="e.g.: City, country code ...">
+			&nbsp;
+			<label class="control-label" for="Surface-Min">Min. Surface</label>
+			<input name="surfaceMin" type="number" ng-model="$ctrl.surfaceMin" class="form-control" placeholder="in SQ.M.">
+			&nbsp;
+			<label class="control-label" for="Price-Max">Max. Price</label>
+			<input name="priceMax" type="number" ng-model="$ctrl.priceMax" class="form-control" placeholder="in &euro;/month">
+			&nbsp;
+			<label class="control-label" for="Keyword">Keyword</label>
+			<input name="keyword" type="text" ng-model="$ctrl.keyword" class="form-control" placeholder="tapez un mot clef">
+		</div>
+		&nbsp;
+<!-- 
+		<div class="form-group dropdown">
+			<button class="btn" id="dFilter" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Filters
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dFilter">
+				<li><a href="#filtreSurface" data-toggle="collapse" data-parent="#panelFiltres" aria-expanded="false" aria-controls="filtreSurface">
+	 				Surface
+				</a></li>      	
+				<li><a href="#filtrePrix" data-toggle="collapse" data-parent="#panelFiltres" aria-expanded="false" aria-controls="filtrePrix">
+	 				Prix
+				</a></li>      	
+				<li><a href="#filtreAdresse" data-toggle="collapse" data-parent="#panelFiltres" aria-expanded="false" aria-controls="filtreAdresse">
+	 				Adresse
+				</a></li>      	
+			</ul>
+		</div>
+ -->
+		&nbsp;<button type="submit" class="btn btn-primary" ng-click="$ctrl.filter()">Submit</button>
+	</form> 
+	<div class="navbar-form navbar-right">
+		<ul class="nav nav-pills">
+			<li role="presentation" class="active"><a href="#list" aria-controls="list" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-th-list"></span></a></li>
+			<li role="presentation"><a href="#mosaic" aria-controls="mosaic" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-th-large"></span></a></li>
+			<li role="presentation"><a href="#detail" aria-controls="detail" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-file"></span></a></li>
+		</ul>
 	</div>
-	<div class="form-group">
-		<label class="control-label" for="Surface-Min">Min. surface</label> <input name="surfaceMin" type="number" ng-model="$ctrl.surfaceMin" class="form-control" placeholder="in SQ.M.">
+</nav>
+<div class="panel-group" id="panelFiltres" role="tablist" aria-multiselectable="true">
+	<div class="panel">
+		<div class="panel-collapse collapse" id="filtreSurface" role="tabpanel">
+			<div class="form-group">
+				<label class="control-label" for="Surface-Min">Min. Surface</label>
+				<input name="surfaceMin" type="number" ng-model="$ctrl.activeFilter.surfaceMin" class="form-control" placeholder="in SQ.M.">
+				&nbsp;
+				<label class="control-label" for="Surface-Max">Max. Surface</label>
+				<input name="surfaceMax" type="number" ng-model="$ctrl.activeFilter.surfaceMax" class="form-control" placeholder="in SQ.M.">
+				<button class="btn" type="button" ng-click="$ctrl.applySurfaceFilter();">Apply</button>
+			</div>
+		</div>
+		<div class="panel-collapse collapse" id="filtrePrix" role="tabpanel">
+			<div class="form-group">
+				<label class="control-label" for="Price-Min">Min. Price</label>
+				<input name="priceMin" type="number" ng-model="$ctrl.activeFilter.priceMin" class="form-control" placeholder="in &euro;/month">
+				&nbsp;
+				<label class="control-label" for="Price-Max">Max. Price</label>
+				<input name="priceMax" type="number" ng-model="$ctrl.activeFilter.priceMax" class="form-control" placeholder="in &euro;/month">
+			</div>
+		</div>
+		<div class="panel-collapse collapse" id="filtreAdresse" role="tabpanel">
+			<div class="well">
+				<p>Mon filtre adresse</p>
+			</div>
+		</div>
 	</div>
-	<div class="form-group">
-		<label class="control-label" for="Price-Max">Max. Price</label> <input name="priceMax" type="number" ng-model="$ctrl.priceMax" class="form-control" placeholder="in &euro;/month">
-	</div>
-	<button type="submit" class="btn btn-primary" ng-click="$ctrl.filter()">Submit</button>
-</form>
+</div>

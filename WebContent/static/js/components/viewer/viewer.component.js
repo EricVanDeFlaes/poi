@@ -2,7 +2,7 @@
 
 App.component('viewer', {
     templateUrl: 'static/templates/viewer/viewer.html',
-    controller: ['RentingService', function (RentingService) {
+   controller: ['RentingService', function (RentingService) {
 	  var vm = this;
 	  vm.baseList = RentingService.getAll();
 	  vm.filteredList = [];
